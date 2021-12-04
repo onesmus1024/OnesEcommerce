@@ -1,0 +1,26 @@
+{% extends 'ecommerce/home.html' %}
+
+
+{% block content %}
+<div class="px">
+    <div class="container px-40">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8 text-center justify-content-center">
+                <form action="" method="post" class="form-group ">
+                    {% csrf_token %}
+        
+                    <fieldset>
+                        <legend>sign up</legend>
+                        {{ form.as_p }}
+                        <input class="btn btn-primary" type="submit" value="submit">
+                    </fieldset>
+            
+                    
+                </form>
+            </div>
+            <div class="col-2"
+        </div>
+    </div>
+</div>
+{% endblock %}

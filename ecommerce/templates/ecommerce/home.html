@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'ecommerce/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'ecommerce/main.css' %}">
+    <script src="{% static 'ecommerce/js/bootstrap.min.js' %}">
+    </script>
+
+</head>
+<body class="bg-white">
+    <div class="container-fluid bar ">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar ">
+                    <ul class="nav">
+                        <div class="navbar-brand ">ones E-commerce</div>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                Products
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                Add Products
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                sign up
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                account
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-6 offset-3 info">
+                <h4 class="text-center">ONES E-COMMERCE</h4>
+                <p class="text-center">
+                    welcome to ones e-commerce
+                </p>
+                <a href="#" class="btn btn-primary ">MAKE YOUR FIRST PURCHASE</a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid banner">
+        <div class="col-12">
+
+        </div>
+    </div>
+
+
+    {% block content %}
+    <div class="container">
+        <div class="row">
+            <div class=" text-center text-blue col-12">
+                <h5>welcome to ones e-commerce,make your purchase</h5>
+            </div>
+
+        </div>
+
+    </div>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,19 @@
+h5{
+    color: blue;
+}
+.banner{
+    background-color: grey;
+    height: 100%;
+    width: 100%;
+    background-image: url('images/home3.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.bar{
+    position: fixed;
+}
+.info{
+    margin-top: 15%;
+}
