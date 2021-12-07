@@ -12,7 +12,7 @@ class SignUp(generic.CreateView):
 
     def get_initial(self):
         initial = super().get_initial()
-        initial['username'] = 'enter your name'
+        #initial['username'] = 'enter your name'
         return initial
 
 
@@ -23,6 +23,7 @@ class Home(generic.TemplateView):
 class ProductsView(generic.TemplateView):
     model= Product
     template_name = 'ecommerce/products.html'
+    #getting model data 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['products']= Product.objects.all()

@@ -1,7 +1,7 @@
 h5{
     color: blue;
 }
-.banner{
+.info{
     background-color: grey;
     height: 100%;
     width: 100%;
@@ -14,6 +14,6 @@ h5{
 .bar{
     position: fixed;
 }
-.info{
-    margin-top: 15%;
+.rounded-pill:hover{
+    background-color: purple;
 }

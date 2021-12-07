@@ -12,66 +12,108 @@
 
 </head>
 <body class="bg-white">
-    <div class="container-fluid bar ">
-        <div class="row">
-            <div class="col-md-12">
-                <nav class="navbar ">
-                    <ul class="nav">
-                        <div class="navbar-brand ">ones E-commerce</div>
+    <div class="container-fluid">
+        <div class="row ">
+            <nav class="navbar navbar-expand-lg navbar-light bg-primary bar shadow fixed-top">
+            
+                <div class="navbar-brand">
+                    <h4 class="text-white">ONES E-COMMERCE</h4>
+                </div>
+                <button class="navbar-toggler" data-bs-toggle="collapse" type="button" data-bs-target="#navbarcontent" >
+                    <span class="navbar-toggler-icon">
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarcontent" >
+                    <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                Home
+                            <a href="{% url 'ecommerce:home' %}" class="nav-link text-white">
+                                HOME
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                Products
+                            <a href="{% url 'ecommerce:products' %}" class="nav-link text-white">
+                                PRODUCTS
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                Add Products
+                            <a href="{% url 'ecommerce:addproduct' %}" class="nav-link text-white">
+                                ADD PRODUCT
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                sign up
+                            <a href="" class="nav-link text-white">
+                                ABOUT US
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="" class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" data-bs-target="#dropdownitem" >
+                                SERVICE
+                            </a>
+                            <ul class="dropdown-menu" id="dropdownitem"> 
+                                <li>
+                                    <a href="" class="dropdown-item">web development</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item"> App development</a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">digital makerting </a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">graphic design</a>
+                                </li>
+    
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link text-white"> FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link text-white">
+                                PORTFOLIO
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                account
+                            <a href="{% url 'ecommerce:signup' %}" class="nav-link text-white">
+                                SIGN UP
                             </a>
                         </li>
+                        <li class="nav-item">
+                            contact
+                            <button class="rounded-pill d-lg-inline border-primary d-md-none" style="border-radius: 20px;">+254710383551</button>
+                        </li>
+                        
                     </ul>
-                </nav>
-            </div>
-            <div class="col-6 offset-3 info">
-                <h4 class="text-center">ONES E-COMMERCE</h4>
-                <p class="text-center">
-                    welcome to ones e-commerce
-                </p>
-                <a href="#" class="btn btn-primary ">MAKE YOUR FIRST PURCHASE</a>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid banner">
-        <div class="col-12">
-
+                </div>
+        </nav>
         </div>
     </div>
 
 
     {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class=" text-center text-blue col-12">
-                <h5>welcome to ones e-commerce,make your purchase</h5>
+    <div class="container-fluid info">
+        <div>
+            <div class="row">
+                <div class=" text-center text-blue col-12">
+                    <h5 class="fw-bold">welcome to ones e-commerce,make your purchase</h5>
+                </div>
             </div>
-
+            <div class="row">
+                <div class="col-6 offset-3 ">
+                    <h4 class="text-center">ONES E-COMMERCE</h4>
+                    <p class="text-center text-danger">
+                        welcome to ones e-commerce
+                    </p>
+                    <a href="{% url 'ecommerce:products'%}"><button class="rounded-pill">MAKE YOUR FIRST PURCHASE</button></a>
+                </div>
+    
+            </div>
         </div>
-
     </div>
+   
     {% endblock %}
 </body>
 </html>
