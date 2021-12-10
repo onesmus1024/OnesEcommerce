@@ -6,7 +6,7 @@
     <div class="row ">
         {% if products %}
             {% for product in products %}
-                <div class="col-4 mb-5">
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-5">
                     <div class="card text-center bg-light h-100">
                         <img class="h-70"  src="{{ product.product_image.url }}" alt="{{product.product_name}}">
                         <div class="card-body h-30">
