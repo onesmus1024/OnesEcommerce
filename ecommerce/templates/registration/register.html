@@ -1,0 +1,16 @@
+{% extends "../ecommerce/home.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6" style="margin-top: 100px;">
+            <form class="form-group" action="{% url 'ecommerce:register' %}">
+                {% csrf_token %}
+                {{form.as_p}}
+                <input type="submit" class="btn btn-primary" value="register">
+            </form>
+        </div>
+    </div>
+</div>
+{%endblock%}

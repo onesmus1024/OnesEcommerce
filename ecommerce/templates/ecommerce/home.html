@@ -77,13 +77,35 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{% url 'ecommerce:signup' %}" class="nav-link text-white">
-                                SIGN UP
-                            </a>
-                        </li>
-                        <li class="nav-item">
                             contact
                             <button class="rounded-pill d-lg-inline border-primary d-md-none" style="border-radius: 20px;">+254710383551</button>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="" class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" data-bs-target="#dropdownitem" >
+                                ACCOUNT
+                            </a>
+                            <ul class="dropdown-menu" id="dropdownitem"> 
+                                
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                {% if user.is_authenticated %}
+                                    <li>
+                                        <a href="{% url 'logout' %}" class="dropdown-item">logout</a>
+                                    </li>
+                                {% else %}
+                                    <li>
+                                        <a href="{% url 'login' %}" class="dropdown-item">login</a>
+                                    </li>
+                                {% endif %}
+                                <li>
+                                    <a href="" class="dropdown-item">my profile</a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">register</a>
+                                </li>
+    
+                            </ul>
                         </li>
                         
                     </ul>
@@ -94,25 +116,30 @@
 
 
     {% block content %}
-    <div class="container-fluid info">
-        <div>
-            <div class="row">
-                <div class=" text-center text-blue col-12">
-                    <h5 class="fw-bold">welcome to ones e-commerce,make your purchase</h5>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-6 offset-3 ">
-                    <h4 class="text-center">ONES E-COMMERCE</h4>
-                    <p class="text-center text-danger">
-                        welcome to ones e-commerce
-                    </p>
-                    <a href="{% url 'ecommerce:products'%}"><button class="rounded-pill">MAKE YOUR FIRST PURCHASE</button></a>
-                </div>
-    
+        {% if user.is_authenticated %}
+            <div class="container-fluid info">
+                <div>
+                    <div class="row">
+                        <div class=" text-center text-blue col-12">
+                            <h5 class="fw-bold">welcome to ones e-commerce,make your purchase</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 offset-3 ">
+                            <h4 class="text-center">ONES E-COMMERCE</h4>
+                            <p class="text-center text-danger">
+                                {{user.username}}
+                                welcome to ones e-commerce
+                            </p>
+                            <a href="{% url 'ecommerce:products'%}"><button class="rounded-pill">MAKE YOUR FIRST PURCHASE</button></a>
+                        </div>
+            
+                    </div>
             </div>
         </div>
-    </div>
+        {% else %}
+            <p>please login <a href="{% url 'login' %}" style="margin-top: 200px;"> click here to login</a></p>
+        {% endif %}
    
     {% endblock %}
 </body>
